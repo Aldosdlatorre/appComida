@@ -1,0 +1,21 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as mix;
+
+.header{
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mix.desktop {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__logo{
+        width: 30rem;
+        margin-bottom: 5rem;
+        @include mix.desktop {
+            margin-bottom: 0;
+        }
+    }
+}

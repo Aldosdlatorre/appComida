@@ -1,0 +1,33 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as mix;
+
+.pasos{
+    margin-top: 5rem;
+
+    &__contenido{
+        background-color: v.$primario;
+    }
+
+    &__heading{
+        text-align: center;
+        color: v.$blanco;
+
+        span{
+            display: block;
+            font-size: 2rem;
+        }
+    }
+
+    &__grid{
+        @include mix.tablet {
+           @include mix.grid(3, v.$separacion);
+        }
+    }
+
+    &__imagen{
+        transition: 300ms ease-in-out;
+        &:hover{
+            transform: rotate(-4deg) scale(1.1);
+        }
+    }
+}
