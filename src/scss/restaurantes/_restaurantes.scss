@@ -8,6 +8,10 @@
         padding: 5rem 0;
         text-align: center;
         color: v.$secundario;
+        font-size: 3rem;
+        @include mix.desktop {
+            font-size: 3.6rem;
+        }
     }
 
     &__grid{
